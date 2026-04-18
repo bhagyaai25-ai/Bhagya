@@ -1,0 +1,37 @@
+print("welcome to quiz compitation")
+questions=[]
+answer=[]
+
+n=int(input("enter the number of question to be ask to participents: "))
+for i in range(n):
+    q=input(f"enter the question{i+1}:")
+    a=input(f"enter answer for question{i+1}")
+
+    questions.append(q)
+    answer.append(a.lower())
+
+print("\n quiz started!")
+print("_________________")
+
+score=0
+for i in range(len(questions)):
+    user_answer=input(questions[i]+"")
+
+    if user_answer.lower()==answer[i]:
+        print("answer is correct")
+        score+=1
+
+    else:
+        print("answer is wrong")
+
+print("--------")
+print("your final score is : ",score)
+
+if score==n:
+    print("excellent!")
+
+elif score=n/2:
+    print("good")
+
+else:
+    print("try again")
